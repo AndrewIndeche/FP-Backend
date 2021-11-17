@@ -47,7 +47,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'superadmin',
     'phonenumber_field',
-    'finance'
+    'finance',
+    'rest_framework',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
