@@ -25,8 +25,8 @@ load_dotenv(dotenv_path=env_path)
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
-
+# SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY='1234GHHHS'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -50,11 +50,14 @@ INSTALLED_APPS = [
     'finance',
     'rest_framework',
     'drf_yasg',
+    'corsheaders',
+
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -89,9 +92,9 @@ WSGI_APPLICATION = 'fuzu_pay.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'fuzu',
-        'USER': 'access',
-        'PASSWORD':'Access',
+        'NAME': 'wuzu',
+        'USER': 'moringa',
+        'PASSWORD':'1234',
     }
 }
 
@@ -140,3 +143,10 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ALLOW_ALL_ORIGINS = True 
+# CSRF_TRUSTED_ORIGINS = [
+    
+# ]
+
+CORS_ALLOW_CREDENTIALS = True
