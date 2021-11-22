@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+python-dotenv = "*"
+djangorestframework = "*"
+pillow = "*"
+drf-yasg = "*"
+django-heroku = "*"
+coreapi = "*"
+gunicorn = "*"
+django-cors-headers = "*"
+cloudinary = "*"
+drf-flex-fields = "*"
+django-phonenumber-field = {extras = ["phonenumberslite"], version = "*"}
+
+[dev-packages]
+autopep8 = "*"
+
+[requires]
+python_version = "3.8"
